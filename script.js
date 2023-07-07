@@ -22,7 +22,7 @@ document.querySelector("#search").addEventListener("click", function () {
     }
 
     // City and API keys are concatenated into API URL for main city section
-    var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey + "&units=imperial";
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey + "&units=imperial";
     fetch(queryURL)
         .then(function (res) {
             return res.json()
@@ -36,7 +36,7 @@ document.querySelector("#search").addEventListener("click", function () {
             document.querySelector("#humidity").innerText = "Humidity: " + data.main.humidity + "%"
 
             // City and API keys are concatenated into API URL for 5 day forecast section
-            var fiveDayURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + APIKey + "&units=imperial";
+            var fiveDayURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + APIKey + "&units=imperial";
             fetch(fiveDayURL)
                 .then(function (res) {
                     return res.json()
