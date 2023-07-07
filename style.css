@@ -1,0 +1,10 @@
+#fiveDay {
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+}
+
+.card {
+    border: 1px solid black;
+    padding: 30px;
+}
